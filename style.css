@@ -1,0 +1,129 @@
+*, *::after, *::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75); /*paragraphs*/
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+.lexend{
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+}
+
+.big-shoulders{
+  font-family: 'Big Shoulders Display', cursive;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 41px;
+}
+
+h1{
+  display: none;
+}
+
+main{
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--very-light-gray);
+}
+
+.card-list{
+  list-style-type: none;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card--orange{
+  background-color: var(--bright-orange);
+}
+
+.card--dark-cyan{
+  background-color: var(--dark-cyan);
+}
+
+.card--very-dark-cyan{
+  background-color: var(--very-dark-cyan);
+}
+
+.card {
+  width: 306px;
+  height: 500px;
+  padding: 48px;
+}
+
+.card__title{
+  margin-top: 32px;
+  color: var(--very-light-gray);
+}
+
+.card__description{
+  margin-top: 24px;
+  color: var(--transparent-white);
+  height: 130px;
+  line-height: 25px;
+  font-size: 15px;
+}
+
+.card__cta--orange, .card__cta--dark-cyan, .card__cta--very-dark-cyan{
+  margin-top: 76px;
+  width: 148px;
+  font-size: 15px;
+  padding: 13px 0px; 
+  border-radius: 999px;  
+  background-color: var(--very-light-gray);  
+  border: none;
+  cursor: pointer;
+}
+
+.card__cta--orange:hover, .card__cta--dark-cyan:hover, .card__cta--very-dark-cyan:hover{
+  background-color: inherit;
+  color: var(--very-light-gray);
+  border: 2px solid var(--very-light-gray);
+}
+
+.card__cta--orange{
+  color: var(--bright-orange);  
+}
+
+.card__cta--dark-cyan{
+  color: var(--very-dark-cyan);  
+}
+
+.card--very-dark-cyan{
+  color: var(--very-dark-cyan);  
+}
+
+@media screen and (max-width: 992px){
+
+  main{
+    height: auto;
+    margin-top: 90px;
+    margin-bottom: 90px;
+  }
+
+  .card-list{
+    flex-direction: column;
+  }
+
+  .card{
+    height: 440px;
+    padding-right: 28px;
+  }
+
+  .card__cta--orange, .card__cta--dark-cyan, .card__cta--very-dark-cyan{
+    margin-top: 16px;
+  }
+
+}
